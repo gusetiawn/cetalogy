@@ -1,0 +1,7 @@
+firebase:
+  apiKey: "AIzaSyBILyq_QFBAtINWQsC4Z12msmmZd6vpIGE"
+  authDomain: "YOUR_AUTH_DOMAIN"
+  projectId: "gigs-dev-9ab8a"
+  storageBucket: "YOUR_STORAGE_BUCKET"
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID"
+  appId: "786108705006"
