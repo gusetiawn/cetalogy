@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    name: Build
+    steps:
+      - name: Build
+        command: |
+          go mod download
+          go build -o app
+      - name: Archive
+        command: |
+          tar -czvf app.tar.gz app
+    plugins:
+      - artifact:
+          name: app
+  deploy:
+    name: Deploy
+    steps:
+      - name: Deploy
+        command: |
+          tar -xzvf /artifacts/app/app.tar.gz -C /app/
+          ./app
