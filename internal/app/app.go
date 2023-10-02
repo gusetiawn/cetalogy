@@ -19,8 +19,10 @@ func NewApp() *App {
 	database.InitializeFirestore()
 
 	userRepository := repository.NewUserRepository()
+	categoryRepository := repository.NewCategoryRepository()
 	userService := service.NewUserService(userRepository)
-	r := router.SetupRouter(userService)
+	categoryService := service.NewGigCategoryService(categoryRepository)
+	r := router.SetupRouter(userService, categoryService)
 
 	return &App{
 		Router:      r,

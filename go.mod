@@ -1,6 +1,6 @@
 module github.com/cetalogy
 
-go 1.21.0
+go 1.21
 
 require (
 	cloud.google.com/go/firestore v1.13.0
