@@ -6,7 +6,7 @@ jobs:
       - name: Build
         command: |
           go mod download
-          go build -o app
+          cd cmd/server && go build -o app
       - name: Archive
         command: |
           tar -czvf app.tar.gz app
